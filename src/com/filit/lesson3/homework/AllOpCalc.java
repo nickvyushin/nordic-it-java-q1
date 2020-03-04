@@ -36,8 +36,7 @@ public class AllOpCalc {
                     System.out.println("На ноль делить нельзя!");
                 } else {
                     double a = num1;
-                    double b = num2;
-                    System.out.println("Результат деления: " + (a / b));
+                    System.out.println("Результат деления: " + (a / num2));
                 }
                 break;
             case "*":
