@@ -17,19 +17,35 @@ public class Frame {
         } else if (height <= 2) {
             System.out.println("Высота рамки не позволяет вписать текст!");
         } else {
-            var widthobl = (width - text.length()) / 2;
-            var heightobl = height / 2;
-            for (int j = 0; j < height; j++) {
-                    if (j == 0) {
-                        for (int i = 0; i < width; i++) {
-                                System.out.println("*");
-                        }
-                    } else if (j == height - (height - 1)){
-                        for (int i = 0; i < height; i++) {
-                            System.out.print("*");
+            for (int i = 0; i < height; i++) {
+                if (i == 0) {
+                    for (int j = 0; j < width; j++) {
+                        System.out.print("*");
                     }
-
+                    System.out.print("\n");
+                } else if (i == height - (height -1)) {
+                    for (int j = 0; j < width; j++) {
+                        if (j == 0)
+                        System.out.print("*");
+                    }
+                    System.out.print("\n");
                 }
+                /* if (j == 0) {
+                    for (int i = 0; i < width; i++) {
+                        System.out.print("*");
+                    }
+                    System.out.print("\n");
+                } else if (j == height - (height - 1)) {
+                    for (int i = 0; i < height; i++) {
+                        System.out.print("*");
+                    }
+                    System.out.print("\n");
+                } else if (j == height - (height - 2)) {
+                    for (int i = 0; i < height; i++) {
+                        System.out.print("*");
+                    }
+                    System.out.print("\n");
+                }*/
 
             }
         }
