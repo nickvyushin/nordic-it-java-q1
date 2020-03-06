@@ -35,8 +35,7 @@ public class AllOpCalc {
                 if (num2 == 0) {
                     System.out.println("На ноль делить нельзя!");
                 } else {
-                    double a = num1;
-                    System.out.println("Результат деления: " + (a / num2));
+                    System.out.println("Результат деления: " + ((double) num1 / num2));
                 }
                 break;
             case "*":
@@ -49,23 +48,19 @@ public class AllOpCalc {
                 System.out.println("Остаток от деления: " + (num1 % num2));
                 break;
             case "^":
+                var result = 1;
+                for (var i = 1; i <= Math.abs(num2); i++) {
+                    result = result * num1;
+                }
                 if (num1 == 0 && num2 < 0) {
                     System.out.println("Бесконечность");
                 } else if (num2 < 0) {
-                    double result = 1;
-                    num2 = Math.abs(num2);
-                    for (var i = 1; i <= num2; i++) {
-                        result = result * num1;
-                    }
-                    System.out.println("Результат возведения в степень: " + (1.0 / result));
+                    System.out.print("Результат возведения в степень: " + (1.0 / result));
                 } else {
-                    var result = 1;
-                    for (var i = 1; i <= num2; i++) {
-                        result = result * num1;
-                    }
-                    System.out.println("Результат возведения в степень: " + result);
+                    System.out.print("Результат возведения в степень: " + result);
                 }
+
                 break;
+                }
         }
     }
-}
