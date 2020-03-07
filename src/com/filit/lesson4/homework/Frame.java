@@ -23,12 +23,17 @@ public class Frame {
                         System.out.print("*");
                     }
                     System.out.print("\n");
-                } else if (i == height - (height -1)) {
+                } else if (i == height - 1) {
                     for (int j = 0; j < width; j++) {
-                        if (j == 0)
                         System.out.print("*");
                     }
                     System.out.print("\n");
+                } else {
+                    System.out.print("*");
+                    for (int j = 0; j < (width - 2); j++) {
+                            System.out.print(" ");
+                    }
+                    System.out.println("*");
                 }
                 /* if (j == 0) {
                     for (int i = 0; i < width; i++) {
