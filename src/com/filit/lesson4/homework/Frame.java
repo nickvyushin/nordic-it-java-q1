@@ -30,28 +30,21 @@ public class Frame {
                     System.out.print("\n");
                 } else {
                     System.out.print("*");
-                    for (int j = 0; j < (width - 2); j++) {
+                    if (i == (height - 1) / 2) {
+                        for (int a = 0; a < (((width - 2) - text.length()) / 2); a++) {
                             System.out.print(" ");
+                        }
+                        System.out.print(text);
+                        for (int a = 0; a < (((width - 2) - text.length()) / 2); a++) {
+                            System.out.print(" ");
+                        }
+                    } else {
+                        for (int j = 0; j < (width - 2); j++) {
+                            System.out.print(" ");
+                        }
                     }
                     System.out.println("*");
                 }
-                /* if (j == 0) {
-                    for (int i = 0; i < width; i++) {
-                        System.out.print("*");
-                    }
-                    System.out.print("\n");
-                } else if (j == height - (height - 1)) {
-                    for (int i = 0; i < height; i++) {
-                        System.out.print("*");
-                    }
-                    System.out.print("\n");
-                } else if (j == height - (height - 2)) {
-                    for (int i = 0; i < height; i++) {
-                        System.out.print("*");
-                    }
-                    System.out.print("\n");
-                }*/
-
             }
         }
     }
