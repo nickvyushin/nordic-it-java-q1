@@ -35,7 +35,7 @@ public class Frame {
                             System.out.print(" ");
                         }
                         System.out.print(text);
-                        for (int a = 0; a < (((width - 2) - text.length()) / 2); a++) {
+                        for (int a = 0; a < (((width - 2) - text.length()) / 2.0); a++) {
                             System.out.print(" ");
                         }
                     } else {
