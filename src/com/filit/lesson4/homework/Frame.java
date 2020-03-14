@@ -12,7 +12,7 @@ public class Frame {
         System.out.println("Введите текст: ");
         var text = sc.next();
 
-        if (width - 2 <= text.length()) {
+        if (width - 2 < text.length()) {
             System.out.println("Ширина рамки не позволяет вписать текст!");
         } else if (height <= 2) {
             System.out.println("Высота рамки не позволяет вписать текст!");
