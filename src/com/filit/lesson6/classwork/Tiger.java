@@ -4,28 +4,17 @@ public class Tiger extends Animal {
 
     private String kind;
 
+    public Tiger(String name, Integer age, String kind) {
+        super(name, age);
+        this.kind = kind;
+    }
+
     public String getKind() {
         return kind;
     }
 
     public void setKind(String kind) {
         this.kind = kind;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
     }
 
     public void hungry() {
@@ -36,4 +25,14 @@ public class Tiger extends Animal {
         System.out.println("Даем тигру еду, а то он съест нас!");
     }
 
+
+    @Override
+    public void say() {
+        System.out.println("Arrrrr");
+    }
+
+    @Override
+    public void breathe() {
+        System.out.println("huh-huh-huh");
+    }
 }

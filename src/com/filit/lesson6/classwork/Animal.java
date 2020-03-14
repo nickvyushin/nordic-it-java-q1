@@ -1,9 +1,14 @@
 package com.filit.lesson6.classwork;
 
-public class Animal {
+public abstract class Animal {
 
     protected String name;
     protected Integer age;
+
+    public Animal(String name, Integer age) {
+        this.name = name;
+        this.age = age;
+    }
 
     public Integer getAge() {
         return age;
@@ -21,5 +26,7 @@ public class Animal {
         this.name = name;
     }
 
+    public abstract void say();
+    public abstract void breathe();
 
 }
