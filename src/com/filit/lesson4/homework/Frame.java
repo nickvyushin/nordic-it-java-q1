@@ -6,13 +6,13 @@ public class Frame {
     public static void main(String[] args) {
         var sc = new Scanner(System.in);
         System.out.println("Введите ширину рамки: ");
-        var width = sc.nextInt();
-        System.out.println("Введите высоту рамки: ");
         var height = sc.nextInt();
+        System.out.println("Введите высоту рамки: ");
+        var width = sc.nextInt();
         System.out.println("Введите текст: ");
         var text = sc.next();
 
-        if (width <= text.length()) {
+        if (width - 2 <= text.length()) {
             System.out.println("Ширина рамки не позволяет вписать текст!");
         } else if (height <= 2) {
             System.out.println("Высота рамки не позволяет вписать текст!");
