@@ -14,9 +14,18 @@ public class Zoo {
         var cat4 = new Cat("Брэд", 5, false);
         var tiger1 = new Tiger("Матильда", 10, "Бенгальский");
 
+        try {
+            cat2.jump(-2);
+        } catch (NegativeValueException e) {
+            System.out.println("Возникла ошибка!");
+        }
+        try {
+            cat2.eat(100);
+        } catch (ManyFoodException e) {
+            System.out.println("Много еды!");
+        }
 
-        cat2.jump(2);
-        cat2.eat(40);
+
 
 
 /*

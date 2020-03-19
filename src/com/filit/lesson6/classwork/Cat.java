@@ -51,12 +51,16 @@ public class Cat extends Animal implements Jumpable, Eateble {
     }
 
     @Override
-    public void jump(float meters) {
-        System.out.println("Пригнуло на " + meters + " метров");
+    public void jump(float meters) throws NegativeValueException {
+        if (meters < 0)
+            throw new NegativeValueException("Невозможно прыгнуть на отрицательное число метров!");
+        System.out.println("Прыгнул на " + meters + " метров");
     }
 
     @Override
-    public void eat(float grammes) {
+    public void eat(float grammes) throws ManyFoodException {
+        if (grammes > 1000)
+            throw new ManyFoodException("Слишком много еды!");
         System.out.println("Насыпали " + grammes + " корма");
     }
 }
