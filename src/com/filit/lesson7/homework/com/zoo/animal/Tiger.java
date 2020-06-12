@@ -5,23 +5,28 @@ public class Tiger extends Animal {
     public Tiger(String name, Integer age, String sounds, Integer speed) {
         super(name, age, sounds, speed);
     }
-
-    private Integer numberOfStrips;
-    private String color;
-
-    public Integer getNumberOfStrips() {
-        return numberOfStrips;
+    public void wallow() {
+    }
+    public void fight() {
     }
 
-    public void setNumberOfStrips(Integer numberOfStrips) {
-        this.numberOfStrips = numberOfStrips;
+    @Override
+    public void eat() {
+        System.out.println("Tiger " + name + " eat");
     }
 
-    public String getColor() {
-        return color;
+    @Override
+    public void reproduce() {
+        System.out.println("Tiger " + name + " reproduced");
     }
 
-    public void setColor(String color) {
-        this.color = color;
+    @Override
+    public String toString() {
+        return "Tiger{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", sounds='" + sounds + '\'' +
+                ", speed=" + speed +
+                '}';
     }
 }

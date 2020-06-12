@@ -6,22 +6,23 @@ public class Lion extends Animal {
         super(name, age, sounds, speed);
     }
 
-    private Boolean isKing;
-    private Integer heirs;
-
-    public Boolean getKing() {
-        return isKing;
+    public void rule() {
+    }
+    public void grin() {
     }
 
-    public void setKing(Boolean king) {
-        isKing = king;
+    @Override
+    public void eat() {
+        System.out.println("Lion " + name + " eat");
     }
 
-    public Integer getHeirs() {
-        return heirs;
-    }
-
-    public void setHeirs(Integer heirs) {
-        this.heirs = heirs;
+    @Override
+    public String toString() {
+        return "Lion{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", sounds='" + sounds + '\'' +
+                ", speed=" + speed +
+                '}';
     }
 }

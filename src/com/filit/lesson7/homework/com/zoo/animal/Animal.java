@@ -1,11 +1,21 @@
 package com.filit.lesson7.homework.com.zoo.animal;
 
-public class Animal {
+public abstract class Animal implements eatable, reproducible, runnable, sleepable {
 
     protected String name;
     protected Integer age;
     protected String sounds;
     protected Integer speed;
+
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", sounds='" + sounds + '\'' +
+                ", speed=" + speed +
+                '}';
+    }
 
     public Animal(String name, Integer age, String sounds, Integer speed) {
         this.name = name;
@@ -14,7 +24,23 @@ public class Animal {
         this.speed = speed;
     }
 
-    public Animal() {
+    @Override
+    public void eat() {
+        System.out.println(name + " eat");
+    }
+
+    @Override
+    public void reproduce() {
+        System.out.println("Any animal can breed");
+    }
+
+    @Override
+    public void run() {
+
+    }
+
+    @Override
+    public void sleep() {
 
     }
 

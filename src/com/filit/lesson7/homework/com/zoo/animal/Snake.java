@@ -5,23 +5,23 @@ public class Snake extends Animal {
     public Snake(String name, Integer age, String sounds, Integer speed) {
         super(name, age, sounds, speed);
     }
-
-    private Integer howLong;
-    private String howVenomous;
-
-    public Integer getHowLong() {
-        return howLong;
+    public void rush() {
+    }
+    public void hide() {
     }
 
-    public void setHowLong(Integer howLong) {
-        this.howLong = howLong;
+    @Override
+    public void eat() {
+        System.out.println("Snake " + name + " eat");
     }
 
-    public String getHowVenomous() {
-        return howVenomous;
-    }
-
-    public void setHowVenomous(String howVenomous) {
-        this.howVenomous = howVenomous;
+    @Override
+    public String toString() {
+        return "Snake{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", sounds='" + sounds + '\'' +
+                ", speed=" + speed +
+                '}';
     }
 }

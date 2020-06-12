@@ -6,25 +6,23 @@ public class Eagle extends Animal {
         super(name, age, sounds, speed);
     }
 
-    public Eagle() {
+    public void fly() {
+    }
+    public void catchMouse() {
     }
 
-    private Integer flightAltitude;
-    private Integer wingspan;
-
-    public Integer getFlightAltitude() {
-        return flightAltitude;
+    @Override
+    public void eat() {
+        System.out.println("Eagle " + name + " eat");
     }
 
-    public void setFlightAltitude(Integer flightAltitude) {
-        this.flightAltitude = flightAltitude;
-    }
-
-    public Integer getWingspan() {
-        return wingspan;
-    }
-
-    public void setWingspan(Integer wingspan) {
-        this.wingspan = wingspan;
+    @Override
+    public String toString() {
+        return "Eagle{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", sounds='" + sounds + '\'' +
+                ", speed=" + speed +
+                '}';
     }
 }

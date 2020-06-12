@@ -5,23 +5,24 @@ public class Monkey extends Animal {
     public Monkey(String name, Integer age, String sounds, Integer speed) {
         super(name, age, sounds, speed);
     }
-
-    private String noise;
-    private Boolean brash;
-
-    public String getNoise() {
-        return noise;
+    public void climb() {
+        System.out.println("Dexterous monkey " + name + " climbing");
+    }
+    public void steal() {
     }
 
-    public void setNoise(String noise) {
-        this.noise = noise;
+    @Override
+    public void eat() {
+        System.out.println("Monkey " + name + " eat");
     }
 
-    public Boolean getBrash() {
-        return brash;
-    }
-
-    public void setBrash(Boolean brash) {
-        this.brash = brash;
+    @Override
+    public String toString() {
+        return "Monkey{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", sounds='" + sounds + '\'' +
+                ", speed=" + speed +
+                '}';
     }
 }

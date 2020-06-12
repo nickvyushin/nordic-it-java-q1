@@ -1,32 +1,29 @@
 package com.filit.lesson7.homework.com.zoo.animal;
 
-public class Bear  extends Animal {
+public class Bear extends Animal {
 
-    private String catchFish;
-    private String pickBerries;
-
-    public Bear(String name, Integer age, String sounds, Integer speed, String catchFish, String pickBerries) {
+    public Bear(String name, Integer age, String sounds, Integer speed) {
         super(name, age, sounds, speed);
-        this.catchFish = catchFish;
-        this.pickBerries = pickBerries;
     }
 
-    public Bear() {
+    public void catchFish() {
     }
 
-    public String getCatchFish() {
-        return catchFish;
+    public void pickBerries() {
     }
 
-    public void setCatchFish(String catchFish) {
-        this.catchFish = catchFish;
+    @Override
+    public void eat() {
+        System.out.println("Bear " + name + " eat");
     }
 
-    public String getPickBerries() {
-        return pickBerries;
-    }
-
-    public void setPickBerries(String pickBerries) {
-        this.pickBerries = pickBerries;
+    @Override
+    public String toString() {
+        return "Bear{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", sounds='" + sounds + '\'' +
+                ", speed=" + speed +
+                '}';
     }
 }

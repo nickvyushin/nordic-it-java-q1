@@ -5,23 +5,23 @@ public class Elephant extends Animal {
     public Elephant(String name, Integer age, String sounds, Integer speed) {
         super(name, age, sounds, speed);
     }
-
-    private Integer weight;
-    private Boolean bigEars;
-
-    public Integer getWeight() {
-        return weight;
+    public void stomp() {
+    }
+    public void splash() {
     }
 
-    public void setWeight(Integer weight) {
-        this.weight = weight;
+    @Override
+    public void eat() {
+        System.out.println("Elephant " + name + " eat");
     }
 
-    public Boolean getBigEars() {
-        return bigEars;
-    }
-
-    public void setBigEars(Boolean bigEars) {
-        this.bigEars = bigEars;
+    @Override
+    public String toString() {
+        return "Elephant{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", sounds='" + sounds + '\'' +
+                ", speed=" + speed +
+                '}';
     }
 }
