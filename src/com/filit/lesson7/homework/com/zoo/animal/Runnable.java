@@ -1,6 +1,6 @@
 package com.filit.lesson7.homework.com.zoo.animal;
 
-public interface runnable {
+public interface Runnable {
 
     void run();
 }

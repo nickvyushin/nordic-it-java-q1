@@ -1,6 +1,7 @@
 package com.filit.lesson7.homework.com.zoo.animal;
 
-public interface eatable {
+public interface Reproducible {
 
-    void eat();
+    void reproduce();
+
 }

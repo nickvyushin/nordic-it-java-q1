@@ -1,6 +1,6 @@
 package com.filit.lesson7.homework.com.zoo.animal;
 
-public abstract class Animal implements eatable, reproducible, runnable, sleepable {
+public abstract class Animal implements Eatable, Reproducible, Runnable, Sleepable {
 
     protected String name;
     protected Integer age;
