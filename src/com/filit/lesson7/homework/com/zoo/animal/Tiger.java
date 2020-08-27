@@ -1,5 +1,7 @@
 package com.filit.lesson7.homework.com.zoo.animal;
 
+import com.filit.lesson7.homework.com.zoo.exceptions.CantFightException;
+
 public class Tiger extends Animal {
 
     public Tiger(String name, Integer age, String sounds, Integer speed) {
@@ -7,7 +9,8 @@ public class Tiger extends Animal {
     }
     public void wallow() {
     }
-    public void fight() {
+    public void fight() throws CantFightException {
+        throw new CantFightException("Cant fight");
     }
 
     @Override

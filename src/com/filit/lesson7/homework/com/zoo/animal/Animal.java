@@ -24,6 +24,9 @@ public abstract class Animal implements Eatable, Reproducible, Runnable, Sleepab
         this.speed = speed;
     }
 
+    public Animal() {
+    }
+
     @Override
     public void eat() {
         System.out.println(name + " eat");

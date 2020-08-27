@@ -1,12 +1,18 @@
 package com.filit.lesson7.homework.com.zoo.animal;
 
+import com.filit.lesson7.homework.com.zoo.exceptions.CantCatchFishException;
+
 public class Bear extends Animal {
 
     public Bear(String name, Integer age, String sounds, Integer speed) {
         super(name, age, sounds, speed);
     }
 
-    public void catchFish() {
+    public Bear() {
+    }
+
+    public void catchFish() throws CantCatchFishException {
+        throw new CantCatchFishException("Cant catch fish");
     }
 
     public void pickBerries() {
