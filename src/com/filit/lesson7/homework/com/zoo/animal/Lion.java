@@ -1,6 +1,6 @@
 package com.filit.lesson7.homework.com.zoo.animal;
 
-public class Lion extends Animal {
+public class Lion extends Animal implements Runnable, Eatable{
 
     public Lion(String name, Integer age, String sounds, Integer speed) {
         super(name, age, sounds, speed);
@@ -11,10 +11,6 @@ public class Lion extends Animal {
     public void grin() {
     }
 
-    @Override
-    public void eat() {
-        System.out.println("Lion " + name + " eat");
-    }
 
     @Override
     public String toString() {
@@ -24,5 +20,15 @@ public class Lion extends Animal {
                 ", sounds='" + sounds + '\'' +
                 ", speed=" + speed +
                 '}';
+    }
+
+    @Override
+    public void eat() {
+
+    }
+
+    @Override
+    public void run() {
+
     }
 }

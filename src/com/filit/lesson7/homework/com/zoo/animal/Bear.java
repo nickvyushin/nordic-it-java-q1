@@ -2,7 +2,7 @@ package com.filit.lesson7.homework.com.zoo.animal;
 
 import com.filit.lesson7.homework.com.zoo.exceptions.CantCatchFishException;
 
-public class Bear extends Animal {
+public class Bear extends Animal implements Eatable {
 
     public Bear(String name, Integer age, String sounds, Integer speed) {
         super(name, age, sounds, speed);

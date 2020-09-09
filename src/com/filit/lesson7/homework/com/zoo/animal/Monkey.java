@@ -1,6 +1,6 @@
 package com.filit.lesson7.homework.com.zoo.animal;
 
-public class Monkey extends Animal {
+public class Monkey extends Animal implements Reproducible{
 
     public Monkey(String name, Integer age, String sounds, Integer speed) {
         super(name, age, sounds, speed);
@@ -12,11 +12,6 @@ public class Monkey extends Animal {
     }
 
     @Override
-    public void eat() {
-        System.out.println("Monkey " + name + " eat");
-    }
-
-    @Override
     public String toString() {
         return "Monkey{" +
                 "name='" + name + '\'' +
@@ -24,5 +19,10 @@ public class Monkey extends Animal {
                 ", sounds='" + sounds + '\'' +
                 ", speed=" + speed +
                 '}';
+    }
+
+    @Override
+    public void reproduce() {
+
     }
 }

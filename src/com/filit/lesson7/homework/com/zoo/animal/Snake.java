@@ -1,6 +1,6 @@
 package com.filit.lesson7.homework.com.zoo.animal;
 
-public class Snake extends Animal {
+public class Snake extends Animal implements Eatable{
 
     public Snake(String name, Integer age, String sounds, Integer speed) {
         super(name, age, sounds, speed);
@@ -11,11 +11,6 @@ public class Snake extends Animal {
     }
 
     @Override
-    public void eat() {
-        System.out.println("Snake " + name + " eat");
-    }
-
-    @Override
     public String toString() {
         return "Snake{" +
                 "name='" + name + '\'' +
@@ -23,5 +18,10 @@ public class Snake extends Animal {
                 ", sounds='" + sounds + '\'' +
                 ", speed=" + speed +
                 '}';
+    }
+
+    @Override
+    public void eat() {
+
     }
 }

@@ -1,8 +1,10 @@
 package com.filit.lesson7.homework.com.zoo;
 
 import com.filit.lesson7.homework.com.zoo.animal.*;
+import com.filit.lesson7.homework.com.zoo.exceptions.AnimalAlreadyInAviaryException;
 import com.filit.lesson7.homework.com.zoo.exceptions.CantCatchFishException;
 import com.filit.lesson7.homework.com.zoo.exceptions.CantFightException;
+import com.filit.lesson7.homework.com.zoo.exceptions.LimitException;
 
 public class Zoo {
     public static void main(String[] args) {
@@ -48,6 +50,7 @@ public class Zoo {
             av1.add(maloy);
             av1.add(sema);
             av1.add(helga);
+            av1.add(sparky);
 
 
             System.out.println("-----");
@@ -58,7 +61,7 @@ public class Zoo {
             maloy.catchFish();
             sema.fight();
 
-        } catch (CantCatchFishException | CantFightException e ) {
+        } catch (CantCatchFishException | CantFightException | AnimalAlreadyInAviaryException | LimitException e) {
             System.out.println("New exception: " + e.getMessage());
         }
     }

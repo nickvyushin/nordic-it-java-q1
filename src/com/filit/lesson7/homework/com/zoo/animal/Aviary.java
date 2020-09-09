@@ -1,5 +1,8 @@
 package com.filit.lesson7.homework.com.zoo.animal;
 
+import com.filit.lesson7.homework.com.zoo.exceptions.AnimalAlreadyInAviaryException;
+import com.filit.lesson7.homework.com.zoo.exceptions.LimitException;
+
 import java.util.ArrayList;
 
 public class Aviary {
@@ -11,7 +14,10 @@ public class Aviary {
         this.limit = limit;
     }
 
-    public void add(Animal animal) {
+    public void add(Animal animal) throws AnimalAlreadyInAviaryException, LimitException {
+        if (animals.size() == limit) {
+            throw new LimitException("Места нет!!!");
+        }
         boolean exist = false;
         //получаем на вход животное
         //проверяем есть ли животное в animals
@@ -25,7 +31,7 @@ public class Aviary {
 
         if (exist) {
             //если есть - выдаем ошибку
-            System.out.println("Животное в вальере");
+            throw new AnimalAlreadyInAviaryException("Животное уже в вальере!");
         } else {
             //иначе - добавляем
             animals.add(animal);

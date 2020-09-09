@@ -1,6 +1,6 @@
 package com.filit.lesson7.homework.com.zoo.animal;
 
-public abstract class Animal implements Eatable, Reproducible, Runnable, Sleepable {
+public abstract class Animal {
 
     protected String name;
     protected Integer age;
@@ -25,26 +25,6 @@ public abstract class Animal implements Eatable, Reproducible, Runnable, Sleepab
     }
 
     public Animal() {
-    }
-
-    @Override
-    public void eat() {
-        System.out.println(name + " eat");
-    }
-
-    @Override
-    public void reproduce() {
-        System.out.println("Any animal can breed");
-    }
-
-    @Override
-    public void run() {
-
-    }
-
-    @Override
-    public void sleep() {
-
     }
 
     public String getName() {
