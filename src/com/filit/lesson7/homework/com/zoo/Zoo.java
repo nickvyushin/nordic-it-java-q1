@@ -1,10 +1,7 @@
 package com.filit.lesson7.homework.com.zoo;
 
 import com.filit.lesson7.homework.com.zoo.animal.*;
-import com.filit.lesson7.homework.com.zoo.exceptions.AnimalAlreadyInAviaryException;
-import com.filit.lesson7.homework.com.zoo.exceptions.CantCatchFishException;
-import com.filit.lesson7.homework.com.zoo.exceptions.CantFightException;
-import com.filit.lesson7.homework.com.zoo.exceptions.LimitException;
+import com.filit.lesson7.homework.com.zoo.exceptions.*;
 
 public class Zoo {
     public static void main(String[] args) {
@@ -45,23 +42,27 @@ public class Zoo {
             /*maloy.setName("Tom");
             System.out.println(maloy.getName());*/
 
-            Aviary av1 = new Aviary(5);
-            av1.add(helga);
-            av1.add(maloy);
-            av1.add(sema);
-            av1.add(helga);
-            av1.add(sparky);
+            Aviaries aviaries = new Aviaries();
 
 
-            System.out.println("-----");
+            aviaries.create(1, new Aviary(5));
+            aviaries.create(2, new Aviary(5));
+            aviaries.create(3, new Aviary(5));
 
-            av1.print();
+            aviaries.add(1, teddy);
+            aviaries.add(1, king);
+            aviaries.add(1, boris);
+            aviaries.add(1, leo);
+            aviaries.add(1, sparky);
+            aviaries.add(1, helga);
+           // aviaries.add(4, sema);
+
 
 
             maloy.catchFish();
             sema.fight();
 
-        } catch (CantCatchFishException | CantFightException | AnimalAlreadyInAviaryException | LimitException e) {
+        } catch (CantCatchFishException | CantFightException | AnimalAlreadyInAviaryException | LimitException | AviaryNotFoundException e) {
             System.out.println("New exception: " + e.getMessage());
         }
     }
