@@ -1,7 +1,6 @@
 package com.filit.lesson17.homework;
 
 import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.LinkedBlockingQueue;
 
 public class CashBox implements Runnable {
 
