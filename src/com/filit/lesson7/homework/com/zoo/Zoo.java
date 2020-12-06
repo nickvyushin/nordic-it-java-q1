@@ -55,8 +55,7 @@ public class Zoo {
             aviaries.add(1, leo);
             aviaries.add(1, sparky);
             aviaries.add(1, helga);
-           // aviaries.add(4, sema);
-
+            // aviaries.add(4, sema);
 
 
             maloy.catchFish();

@@ -1,13 +1,16 @@
 package com.filit.lesson7.homework.com.zoo.animal;
 
-public class Eagle extends Animal implements Eatable{
+public class Eagle extends Animal implements Eatable {
 
     public Eagle(String name, Integer age, String sounds, Integer speed) {
         super(name, age, sounds, speed);
     }
 
+
+
     public void fly() {
     }
+
     public void catchMouse() {
     }
 

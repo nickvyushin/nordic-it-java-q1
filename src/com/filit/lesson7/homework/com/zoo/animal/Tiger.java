@@ -2,13 +2,15 @@ package com.filit.lesson7.homework.com.zoo.animal;
 
 import com.filit.lesson7.homework.com.zoo.exceptions.CantFightException;
 
-public class Tiger extends Animal implements Runnable, Reproducible{
+public class Tiger extends Animal implements Runnable, Reproducible {
 
     public Tiger(String name, Integer age, String sounds, Integer speed) {
         super(name, age, sounds, speed);
     }
+
     public void wallow() {
     }
+
     public void fight() throws CantFightException {
         throw new CantFightException("Cant fight");
     }

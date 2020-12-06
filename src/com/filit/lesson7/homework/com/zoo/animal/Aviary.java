@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class Aviary {
 
     int limit;
-    ArrayList<Animal> animals = new ArrayList<Animal>();;
+    ArrayList<Animal> animals = new ArrayList<Animal>();
 
     public Aviary(int limit) {
         this.limit = limit;
