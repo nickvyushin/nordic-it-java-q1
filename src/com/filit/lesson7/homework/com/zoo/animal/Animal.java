@@ -1,11 +1,33 @@
 package com.filit.lesson7.homework.com.zoo.animal;
 
-public abstract class Animal {
+public class Animal implements Eatable {
 
     protected String name;
     protected Integer age;
     protected String sounds;
     protected Integer speed;
+
+    public void see(Integer range) {
+        System.out.println("Дальность зрения животного: " + range);
+    }
+
+    public void see(String whatVision) {
+        System.out.println("Это животное: " + whatVision);
+    }
+
+    public void breath() {
+        System.out.println("Все животные могут дышать.");
+    }
+
+    @Override
+    public void eat(Integer amount) {
+        System.out.println("Животному дали еды в количестве: " + amount);
+    }
+
+    @Override
+    public void eat(String kindOfFood) {
+        System.out.println("Животному дали: " + kindOfFood);
+    }
 
     @Override
     public String toString() {

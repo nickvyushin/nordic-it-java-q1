@@ -8,6 +8,9 @@ public class Tiger extends Animal implements Runnable, Reproducible {
         super(name, age, sounds, speed);
     }
 
+    public Tiger() {
+    }
+
     public void wallow() {
     }
 

@@ -6,6 +6,9 @@ public class Elephant extends Animal implements Sleepable {
         super(name, age, sounds, speed);
     }
 
+    public Elephant() {
+    }
+
     public void stomp() {
     }
 

@@ -6,6 +6,9 @@ public class Monkey extends Animal implements Reproducible {
         super(name, age, sounds, speed);
     }
 
+    public Monkey() {
+    }
+
     public void climb() {
         System.out.println("Dexterous monkey " + name + " climbing");
     }

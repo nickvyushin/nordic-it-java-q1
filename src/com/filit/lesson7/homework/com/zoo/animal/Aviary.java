@@ -3,64 +3,41 @@ package com.filit.lesson7.homework.com.zoo.animal;
 import com.filit.lesson7.homework.com.zoo.exceptions.AnimalAlreadyInAviaryException;
 import com.filit.lesson7.homework.com.zoo.exceptions.LimitException;
 
-import java.util.ArrayList;
+import java.util.HashSet;
 
 public class Aviary {
 
     int limit;
-    ArrayList<Animal> animals = new ArrayList<Animal>();
+    HashSet<Animal> animals = new HashSet<>();
 
+    //Устанавливается лимит для вольера
     public Aviary(int limit) {
         this.limit = limit;
     }
 
+    //Метод добавляет животное в вольер
     public void add(Animal animal) throws AnimalAlreadyInAviaryException, LimitException {
         if (animals.size() == limit) {
             throw new LimitException("Места нет!!!");
         }
-        boolean exist = false;
-        //получаем на вход животное
-        //проверяем есть ли животное в animals
-        for (int i = 0; i < animals.size(); i++) {
-            var animalIn = animals.get(i);
-            if (animal == animalIn) {
-                exist = true;
-                break;
-            }
-        }
-
-        if (exist) {
-            //если есть - выдаем ошибку
-            throw new AnimalAlreadyInAviaryException("Животное уже в вальере!");
+        boolean addAnimal = animals.add(animal);
+        if (addAnimal) {
+            System.out.println("Животное добавлено!");
         } else {
-            //иначе - добавляем
-            animals.add(animal);
+            throw new AnimalAlreadyInAviaryException("Животное уже в вольере!");
         }
 
     }
 
-    public void delete(Animal a) {
-        //ищем животное в animals, которое хотим удалить
-        for (int i = 0; i < animals.size(); i++) {
-            var animalFromAviary = animals.get(i);
-            if (a == animalFromAviary) {
-                //удаляем найденое животное из animals
-                animals.remove(animalFromAviary);
-            }
-
-        }
-
-
+    //Метод удаляет животное из вольера
+    public void delete(Animal animal) {
+        animals.remove(animal);
     }
 
+    //Метод выводит список животных в вольере
     public void print() {
-        // вытащить животных из листа
-        for (var i = 0; i < animals.size(); i++) {
-            var a = animals.get(i);
-            // распечатать животных
-            System.out.println(a);
+        for (Animal animal : animals) {
+            System.out.println(animal);
         }
-
-
     }
 }
